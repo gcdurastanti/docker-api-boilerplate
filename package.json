@@ -1,0 +1,44 @@
+{
+  "name": "face-unlock",
+  "version": "1.0.0",
+  "description": "Service for signing in with facial recognition",
+  "main": "./lib/index.js",
+  "files": [
+    "*.md",
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "test": "mocha ./test --require @babel/register",
+    "clean": "rm -rf ./lib",
+    "build": "npm run clean && mkdir ./lib && babel ./src -d ./lib --source-maps",
+    "start": "node ./lib/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gcdurastanti/face-unlock.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gcdurastanti/face-unlock/issues"
+  },
+  "homepage": "https://github.com/gcdurastanti/face-unlock#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/register": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.15.1",
+    "eslint-plugin-mocha": "^5.3.0",
+    "mocha": "^6.0.2",
+    "prettier": "^1.16.4"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bson-ext": "^2.0.2",
+    "express": "^4.16.4",
+    "mongodb": "^3.2.3"
+  }
+}
